@@ -141,6 +141,7 @@ var jconfirm, Jconfirm;
                     $.get(url, function (html) {
                         contentDiv.html(html);
                         $btnc.find('button').removeAttr('disabled');
+						that.bodyLoaded(that.$b);
                         that.setDialogCenter();
                     });
                 }, 1);
@@ -307,9 +308,9 @@ var jconfirm, Jconfirm;
         title: 'Hello',
         content: 'Are you sure to continue?',
         icon: '',
-        confirmButton: 'Okay',
+        confirmButton: 'OK',
         cancelButton: 'Cancel',
-        confirmButtonClass: 'btn-default',
+        confirmButtonClass: 'btn-info',
         cancelButtonClass: 'btn-default',
         theme: 'white',
         animation: 'scale',
@@ -321,6 +322,8 @@ var jconfirm, Jconfirm;
         },
         cancel: function () {
         },
+		bodyLoaded: function () {
+		},
         backgroundDismiss: true,
         autoClose: false,
         closeIcon: true,
