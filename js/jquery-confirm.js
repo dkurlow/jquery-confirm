@@ -141,7 +141,7 @@ var jconfirm, Jconfirm;
                     $.get(url, function (html) {
                         contentDiv.html(html);
                         $btnc.find('button').removeAttr('disabled');
-			that.bodyLoaded(that.$b);
+			that.contentLoaded(that.$b);
                         that.setDialogCenter();
                     });
                 }, 1);
@@ -322,7 +322,7 @@ var jconfirm, Jconfirm;
         },
         cancel: function () {
         },
-	bodyLoaded: function () {
+	contentLoaded: function () {
 	},
         backgroundDismiss: true,
         autoClose: false,
